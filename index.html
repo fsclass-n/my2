@@ -266,10 +266,7 @@
                 <!-- Project 1: Subway -->
                 <div class="portfolio-card" data-aos>
                     <div class="portfolio-image">
-                        <div class="portfolio-image-placeholder subway-bg">
-                            <i class="fas fa-subway"></i>
-                            <span>Subway Korea</span>
-                        </div>
+                        <img src="images/subway.png" alt="Subway Korea 프로젝트 스크린샷" class="portfolio-img" loading="lazy">
                         <div class="portfolio-overlay">
                             <a href="https://subwaykr.onrender.com" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn">
                                 <i class="fas fa-external-link-alt"></i> 사이트 방문
@@ -295,10 +292,7 @@
                 <!-- Project 2: MovieFlow -->
                 <div class="portfolio-card" data-aos>
                     <div class="portfolio-image">
-                        <div class="portfolio-image-placeholder movie-bg">
-                            <i class="fas fa-film"></i>
-                            <span>MovieFlow</span>
-                        </div>
+                        <img src="images/movieflow.png" alt="MovieFlow 프로젝트 스크린샷" class="portfolio-img" loading="lazy">
                         <div class="portfolio-overlay">
                             <a href="https://movieflowkr.onrender.com" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn">
                                 <i class="fas fa-external-link-alt"></i> 사이트 방문
@@ -323,10 +317,7 @@
                 <!-- Project 3: Recipe -->
                 <div class="portfolio-card" data-aos>
                     <div class="portfolio-image">
-                        <div class="portfolio-image-placeholder recipe-bg">
-                            <i class="fas fa-utensils"></i>
-                            <span>Recipe Korea</span>
-                        </div>
+                        <img src="images/recipe.png" alt="Recipe Korea 프로젝트 스크린샷" class="portfolio-img" loading="lazy">
                         <div class="portfolio-overlay">
                             <a href="https://recipekr.onrender.com" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn">
                                 <i class="fas fa-external-link-alt"></i> 사이트 방문
@@ -395,11 +386,11 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper" data-aos>
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" class="contact-form">
-                        <input type="hidden" name="form-name" value="contact">
-                        <p class="hidden" style="display:none;">
-                            <label>Don't fill this out: <input name="bot-field"></label>
-                        </p>
+                    <form id="contactForm" class="contact-form">
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                        <input type="hidden" name="subject" value="포트폴리오 사이트에서 새 메시지가 도착했습니다">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
                         <div class="form-group">
                             <label for="name">이름 <span class="required">*</span></label>
                             <div class="input-wrapper">

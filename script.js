@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // --- Netlify Form Handling ---
+    // --- Web3Forms Handling ---
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     const submitBtn = document.getElementById('submitBtn');
@@ -162,18 +162,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 const formData = new FormData(contactForm);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
 
-                const response = await fetch('/', {
+                const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(formData).toString()
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
                 });
 
-                if (response.ok) {
+                const result = await response.json();
+
+                if (result.success) {
                     contactForm.style.display = 'none';
                     formSuccess.style.display = 'block';
                 } else {
-                    throw new Error('Form submission failed');
+                    throw new Error(result.message || 'Form submission failed');
                 }
             } catch (error) {
                 alert('메시지 전송에 실패했습니다. 다시 시도해 주세요.');

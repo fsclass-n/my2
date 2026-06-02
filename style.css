@@ -938,40 +938,15 @@ img {
     overflow: hidden;
 }
 
-.portfolio-image-placeholder {
+.portfolio-img {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    color: var(--white);
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    object-fit: cover;
+    object-position: top center;
     transition: var(--transition-smooth);
 }
 
-.portfolio-image-placeholder i {
-    font-size: 3rem;
-    opacity: 0.9;
-}
-
-.subway-bg {
-    background: linear-gradient(135deg, #00b09b, #96c93d);
-}
-
-.movie-bg {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-}
-
-.recipe-bg {
-    background: linear-gradient(135deg, #f093fb, #f5576c);
-}
-
-.portfolio-card:hover .portfolio-image-placeholder {
+.portfolio-card:hover .portfolio-img {
     transform: scale(1.05);
 }
 
